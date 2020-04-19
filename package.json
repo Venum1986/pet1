@@ -1,0 +1,31 @@
+{
+  "name": "pet1",
+  "version": "1.0.0",
+  "description": "Pet project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Venum1986/pet1.git"
+  },
+  "author": "Shakhvali Musaev <GtCastrolSupra1986@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Venum1986/pet1/issues"
+  },
+  "homepage": "https://github.com/Venum1986/pet1#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "html-webpack-plugin": "^4.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
