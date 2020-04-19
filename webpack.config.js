@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
@@ -22,6 +22,16 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './index.html'
-        })
-    ],
+        }),
+        new HtmlWebpackPartialsPlugin([
+            {
+                path: path.resolve(__dirname, './src/views/partials/header.html'),
+                template_filename: '*'
+            },
+            {
+                path: path.resolve(__dirname, './src/views/partials/footer.html'),
+                template_filename: '*'
+            }
+            ])
+    ]
 };
